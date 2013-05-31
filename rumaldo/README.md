@@ -1,4 +1,4 @@
 # Rumaldo Holguin
 
 ## About
-* Digital Artist
+* Digital Artist (14 years)
