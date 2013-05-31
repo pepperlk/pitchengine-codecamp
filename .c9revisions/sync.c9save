@@ -1,0 +1,7 @@
+{"ts":1370032652197,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"git pull\ngit add .\ngit commit -a -m \"Auto\"\ngit push"]],"start1":0,"start2":0,"length1":0,"length2":51}]],"length":51}
+{"contributors":[],"silentsave":true,"ts":1370032664758,"patch":[[{"diffs":[[0," -a -m \""],[1," "],[0,"Auto\"\ngi"]],"start1":29,"start2":29,"length1":16,"length2":17}]],"length":52,"saved":false}
+{"ts":1370032667623,"patch":[[{"diffs":[[0," -a -m \""],[1,"$"],[0," Auto\"\ng"]],"start1":29,"start2":29,"length1":16,"length2":17}]],"length":53,"saved":false}
+{"ts":1370032669506,"patch":[[{"diffs":[[0,"-a -m \"$"],[1,"{}"],[0," Auto\"\ng"]],"start1":30,"start2":30,"length1":16,"length2":18}]],"length":55,"saved":false}
+{"ts":1370032672012,"patch":[[{"diffs":[[0,"a -m \"${"],[1,"C9_"],[0,"} Auto\"\n"]],"start1":31,"start2":31,"length1":16,"length2":19}]],"length":58,"saved":false}
+{"ts":1370032672440,"patch":[[{"diffs":[[0,"m \"${C9_"],[1,"US"],[0,"} Auto\"\n"]],"start1":34,"start2":34,"length1":16,"length2":18}]],"length":60,"saved":false}
+{"ts":1370032673738,"patch":[[{"diffs":[[0,"\"${C9_US"],[1,"ER"],[0,"} Auto\"\n"]],"start1":36,"start2":36,"length1":16,"length2":18}]],"length":62,"saved":false}

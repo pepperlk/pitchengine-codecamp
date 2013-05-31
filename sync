@@ -1,4 +1,4 @@
 git pull
 git add .
-git commit -a -m "Auto"
+git commit -a -m "${C9_USER} Auto"
 git push
