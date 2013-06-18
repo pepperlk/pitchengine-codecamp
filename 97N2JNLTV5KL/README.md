@@ -2,3 +2,5 @@
 # Cameron Whiting
 <!-- stuff goes here, correct? -->
 <!--also, can I use the terminal at all, or no? -->
+<!--current terminal usage: ls, wall, echo-->
+<!--yes, that was me.-->
