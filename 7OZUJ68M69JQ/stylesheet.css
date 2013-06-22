@@ -1,63 +1,8 @@
-:link {
-    text-decoration:none;
-    color:purple;
-}
-:hover {
-    color:#00ff00;
-}
-:visited {
-    color:green;
-}
-.Life {
-    border:2px green;
-}
-#dunes {
-    float:right;
-    position:relative;
-    width:60%;
-    height:60%;
-    top:10px;
-}
-p {
-    float:right;
-    Position:relative;
-}
-div {
-    height: 50px;
-	width: 100px;
-	border: 2px solid black;
-	border-radius: 5px;
-	display:inline-block;
-    margin:auto;
-	
-}
 
-#one {
-	background-color: #FF0000;
-}
-
-#two {
-	background-color: #0000FF;
-}
-body {
-    background-color:#DCDCDC;
-}
-img p {
-    font-family:Garamond;
-}
-table {
-    float:right;
-    margin:20px;
-}
-body img {
-    height:50px;
-    width:50px;
-    float:left;
-}
 #header{
     height: 100px;
     width: 1000px;
-    background-color: #151B54;
+    background-color:#06F9E9;
     margin-bottom: 5px;
     margin-top: 0px;
     margin-right: 90px;
@@ -66,8 +11,49 @@ body img {
     border-top-right-radius: 20px;
     float: right;
 }
+h1{
+    color:green;
+    font-family:cursive;
+}
+#sidebar{
+    height:600px;
+    width:240px;
+    background-color:#06F9E9;
+    margin-bottom:10px;
+    margin-top:5px;
+    margin-right:5px;
+    border-radius:10px;
+    float:left;
 }
 #body{
-    float:auto;
-    position:auto;
+    height:500px;
+    width:1000px;
+    background-color:#06F9E9;
+    margin-bottom:10px;
+    margin-top:5px;
+    margin-right:5px;
+    border-radius:10px;
+    position:fixed;
+    top:110px;
+    left:254px;
+}
+#footer{
+    height:50px;
+    width:1000px;
+    background-color:#06F9E9;
+    clear:both;
+}
+body{
+    background-color:black;
+}
+#picofme{
+    position:fixed;
+    top:170px;
+    height:400px;
+    width:500px;
+    float:left;
+}
+#bodyp{
+    Float:right;
+    font-family:fancy;
 }

@@ -1,0 +1,84 @@
+
+/* some styling, I hope */
+body {
+    background-color: red;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+}
+#motd {
+	float:left;
+}
+#titlebar {
+	position:absolute;
+	width:100%;
+	height:100px;
+	background-color: gray;
+}
+#headerdiv {
+	height: 40px;
+	position:absolute;
+	margin-left:200px;
+	font-size:25px;
+}
+#navigation {
+	background-color:#0000FF;
+	position:absolute;
+	margin-top:7.6%;
+	width:100%;
+	height: 60px;
+}
+#navbar {
+	background-color: white;
+	height: 40px;
+	margin-left:20%;
+	margin-right:20%;
+	padding-top:auto;
+	padding-bottom:auto;
+	padding-left:auto;
+	padding-right:auto;
+}
+.playnice {
+	display: inline-block;
+}
+.navbutton {
+	height: 30px;
+	width: 100px;
+	padding-right:none;
+	padding-left:none;
+	background-color:purple;
+	border-radius: 10px;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+#WCLcontent {
+	position:absolute;
+	background-color: orange;
+	margin-top:15%;
+	margin-left:20%;
+	margin-right:20%;
+	margin-bottom:15%;
+	padding-top:5%;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom:5%;
+	border-radius: 15px;
+}
+#carrosel {
+	position: absolute;
+	margin-top:24%;
+	margin-left:10%;
+	width:1000px;
+	height:400px;
+	background-color:blue;
+}
+#spacer {
+	height:400px;
+	width:20px;
+}
