@@ -1,0 +1,16 @@
+:link {
+    text-decoration:none;
+    color:#008b45;
+}
+:hover {
+    color:#00ff00;
+}
+:visited {
+    color:#ee9a00;
+}
+.Life {
+    border:2px dashed green;
+}
+H3 {
+    color:purple;
+}
