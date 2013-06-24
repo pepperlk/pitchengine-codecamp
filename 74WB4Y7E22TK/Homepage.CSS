@@ -33,11 +33,11 @@ h1{
 }
 
 .left {
-    height: 1000px;
+    height: 510px;
 	width: 150px;
 	background-color: #DFC184;
 	float: left;
-	margin-bottom: 10px;
+	margin-bottom: 125px;
     position: fixed;
     margin-top: 0px;
     margin-left: 90px;
@@ -85,7 +85,6 @@ h1{
     margin-right: 90px;
     bottom: -20px;
     clear: both;
-    position: fixed;
     border-radius: 0px;
 }
 

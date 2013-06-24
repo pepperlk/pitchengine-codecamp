@@ -1,0 +1,12 @@
+div{
+    height:700px;
+    width:1300px;
+    background-color:blue;
+}
+#pic1{
+    height:200px;
+    width:200px;
+    position:fixed;
+    top:100px;
+    left:100px;
+}
