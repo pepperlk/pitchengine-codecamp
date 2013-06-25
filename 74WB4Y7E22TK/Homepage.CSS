@@ -12,7 +12,25 @@ div{
     border-radius: 20px;
 }
 
-#header{
+#top_header{
+    height: 50px;
+    width: 100%;
+    border-radius: 0px;
+    background-image: linear-gradient(to bottom, #644436 50%, #FFFFFF 100%);
+}
+
+#top_header2{
+    height: 50px;
+    width: 100%;
+    background-color: #8F6048;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    background-image: linear-gradient(to top, #8F6048 50%, #FFFFFF 100%);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#bottom_header{
     height: 100px;
     width: 1000px;
     background-color: #151B54;
@@ -33,7 +51,7 @@ h1{
 }
 
 .left {
-    height: 510px;
+    height: 420px;
 	width: 150px;
 	background-color: #DFC184;
 	float: left;
@@ -77,15 +95,15 @@ h1{
 }
 
 #footer{
-    height: 120px;
+    height: 100px;
     width: 1155px;
     background-color: #151B54;
     margin-top: 5px;
     margin-left: 90px;
     margin-right: 90px;
-    bottom: -20px;
     clear: both;
     border-radius: 0px;
+    background-image: linear-gradient(to bottom, #644436 50%, #FFFFFF 100%);
 }
 
 h3{

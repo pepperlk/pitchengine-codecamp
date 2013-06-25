@@ -3,17 +3,40 @@ a {
 }
 h1 {
     color: purple;
-    display:inline-block;
     border: 3px solid black;
     background-color: #ff00ff;
     width:1350px;
     height:100px;
     display:inline-block;
-    font-size:50px;
+    font-size:80px;
 }
-#navbar {
-	position: fixed;
-	left:50%;
-	margin-left:-254px;
-    margin-top: -10px;
+div div {
+    display:inline-block;
+    border: 5px solid black;
+    float:left;
+    width:300px;
+    height:1500px;
+    background-color:#ff00ff;
+}
+body {
+    background-color:#00ffff;
+}
+a:link {
+    color:#faebd7;
+}
+table {
+    border:3px solid black;
+    float:right;
+}
+table img {
+    width:100px;
+    height:100px;
+}
+img {
+    width:425px;
+    height:550px;
+    float:auto;
+}
+p {
+    font-size:25px;
 }
