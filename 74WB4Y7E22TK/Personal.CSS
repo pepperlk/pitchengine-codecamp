@@ -1,0 +1,26 @@
+#header1{
+    height: 50px;
+    width: 100%;
+    background-color: #3b3131;
+    border: 1px solid black;
+    margin: 0;
+}
+
+#header2{
+    height: 80px;
+    width: 100%;
+    background-color: #313B3B;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    margin: 0;
+}
+
+#center{
+    height: 350px;
+    width: 770px;
+    background-color: #d1d0ce;
+    float: none;
+    margin-left: 300px;
+    margin-right: 300px;
+}
