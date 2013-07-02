@@ -56,7 +56,7 @@ body{
     margin-right:40px;
     border-radius:30px;
 }
-#game{
+.game{
     background-color:blue;
     height:50px;
     width:50px;
