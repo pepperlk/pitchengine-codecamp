@@ -13,21 +13,11 @@ div{
 }
 
 #top_header{
-    height: 50px;
+    height: 100px;
     width: 100%;
-    border-radius: 0px;
-    background-image: linear-gradient(to bottom, #644436 50%, #FFFFFF 100%);
-}
-
-#top_header2{
-    height: 50px;
-    width: 100%;
-    background-color: #8F6048;
+    background-image: linear-gradient(to bottom, #644436 20%, #FFFFFF 50%, #8F6048 80%);
+    border-radius: 0;
     margin-bottom: 10px;
-    border-radius: 0px;
-    background-image: linear-gradient(to top, #8F6048 50%, #FFFFFF 100%);
-    font-size: 2em;
-    font-weight: bold;
 }
 
 #bottom_header{
@@ -35,9 +25,9 @@ div{
     width: 1000px;
     background-color: #151B54;
 	margin-bottom: 5px;
-    margin-top: 0px;
+    margin-top: 105px;
     margin-right: 90px;
-    border-radius: 0px;
+    border-radius: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     float: right;
@@ -51,13 +41,13 @@ h1{
 }
 
 .left {
-    height: 420px;
+    height: 430px;
 	width: 150px;
 	background-color: #DFC184;
 	float: left;
 	margin-bottom: 125px;
     position: fixed;
-    margin-top: 0px;
+    margin-top: 50px;
     margin-left: 90px;
 }
 
@@ -81,12 +71,22 @@ h1{
 }
 
 .right {
-	height: 1000px;
+	height: 3000px;
 	width: 1000px;
 	background-color: #274257;
 	float: right;
 	margin-bottom: 10px;
     margin-right: 90px;
+}
+
+.inspirational{
+    border: 2px solid black;
+    font-size: 1.7em;
+}
+
+img{
+    height: 200px;
+    width: 180px;
 }
 
 #homepage{
