@@ -1,13 +1,19 @@
 $(document).ready(function(){
-   $("#dis").height(200);
+   
    $("#dis").mouseenter(function(){
-        $("#dis").css("color", "red");
-        $("#dis").click(function(){
-           $("*").fadeOut("slow") 
+        $(this).css("background-color", "red");
+        $(this).click(function(){
+           $("*").fadeOut("slow") ;
         });
     }); 
     
-    
+    $("#dis").mouseleave(function(){
+         $(this).css("background-color", "#191919");
+        $(this).click(function(){
+           $("*").fadeOut("slow") ;
+        });
+        
+    });
     
     
     

@@ -22,7 +22,11 @@ a{
     border-right: 1px solid black;
     border-left: 1px solid black;
     margin: 0;
-    font-size: 3.7em;
+}
+
+#the_10{
+    font-size: 3.4em;
+    position: absolute;
 }
 
 #center{
@@ -30,6 +34,7 @@ a{
     width: 300px;
     background-color: #EBF4FA;
     margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 2em;
     border: 3px solid #000080;
     float: left;
@@ -41,6 +46,7 @@ a{
     width: 300px;
     background-color: #EBF4FA;
     margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 2em;
     border: 3px solid #000080;
     float: right;
@@ -48,12 +54,24 @@ a{
 }
 
 #center2{
-    height: 1000px;
+    height: 2000px;
     width: 1000px;
-    border-top: 1px solid #736F6E;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 100px;
+    padding: 20px;
     clear: both;
+    background-color: #EBF4FA;
+}
+
+.inspirational{
+    border: 2px solid black;
+    padding: 20px;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
 }
 
 #footer{
@@ -62,4 +80,16 @@ a{
     background-color: #A65100;
     clear: both;
     margin-bottom: 0;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #7EB5D6;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+a{
+    color: white;
+    font-weight: normal;
 }

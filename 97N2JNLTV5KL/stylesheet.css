@@ -1,39 +1,95 @@
 /* some styling, I hope */
+/* media queries */
+/* will use the width property of the debugging div to help the jquery work*/
+
+@media (max-aspect-ratio:4/5) {
+
+#debugging {
+    top:0;
+    left:0;
+    position:absolute;
+    width:20px;
+    height:25px;
+    background-color:red;
+    border-radius:15px;
+}
+#navbar {
+    padding-left:5px;
+}
+#name {
+    margin: 10px 0 10px 10px;
+}
+}
+@media (min-aspect-ratio:5/4) {
+    
+
+#debugging {
+    width:25px;
+    height:20px;
+    background-color:green;
+    border-radius:15px;
+}
+}
+/*16/9?*/
+
+
+/*universal code*/
+*{margin:0;
+    padding:0;}
 body {
     background-image:url('http://69.145.68.236:10200/amber.jpg');
     background-repeat:no-repeat;
-    background-size:100% 100%;
+    background-size:100% 100%; /*still debugging*/
     background-position: top left;
     margin: 0;
-}
-#fadebackground {
-    background-color: #E1DFE8;
-    width:1300px;
-    height:1500px;
-    position:absolute;
-    opacity:0;
 }
 a {
 	text-decoration: none;
 	color: black;
 }
-a:hover {
-	text-decoration: none;
+/*popup info*/
+#termblob {
+    background-color:#797582;
+    opacity:.9;
+    display: none;
+    position:fixed;
+    z-index:3;
 }
+#contract {
+    margin-left:100px;
+    margin-top:100px;
+    color:white;
+}
+#termsclose {
+    background-color:#F2303A;
+    border-radius:20px;
+    position:fixed;
+    top:11%;
+    left:1050px;
+    height:40px;
+    width:60px;
+    color:white;
+}
+/*top to bottom*/
 #title {
 	height: 100px;
-	padding-top:10px;
-	padding-bottom:10px;
-	padding-left:200px;
-	font-size:25px;
 	width:1200;
     display:none;
     background-color: #E1DFE8;
     opacity:.7;
     margin:0;
 }
+#name {
+    text-align:center;
+}
+#slogan {
+    margin:10px 0 10px 0;
+    font-weight:normal;
+    font-size:.5em;
+    text-align:center;
+}
+/*nav stuff*/
 #navbar {
-	padding-left:200px;
 	width:100%;
 	height:40px;
 	background-color:#797582;
@@ -52,121 +108,60 @@ a:hover {
 	padding-top: 5px;
 	padding-left: 5px;
 }
-#backing {
-    position:absolute;
-	background-color: #E8E6ED;
-	margin:300px 140px 80px 120px;
-    /*will modify the margin to center instead of this */
-    height:1300px;
-    width:970px;
-	/*padding:75px 100px 190px 100px; /*moved values*/
-	border-radius: 15px;
-    /* I want to do a style with only the carousel, actually*/
-    display: none;
-    opacity:.8;
-    z-index: -1;
-}
-/*I just barely swapped names, so values might be off */
-#content {
-    background-color: #E8E6ED;
-    margin:270px 240px 270px 240px;
-    height:950px;
-    width:680px;
-    padding:20px 20px 20px 20px;
-	border-radius: 15px;
-    /*z-index:-1;*/
-    opacity:1;
-    display:none;
+/*carousel stuff*/
+
+.container {
+    width:1000%;
+    height:400px;
+    overflow:hidden;   
 }
 #carosel {
-	margin-left:40px;
+	margin-left:center/*200px*/;
+    margin-top:center/*100px*/;
 	width:600px;
 	height:400px;
-	background-color:#565559;
+	background-color:#E8E6ED/*#565559*/;
 	border-radius: 15px;
-    opacity:1;
+    overflow:hidden;
+    position:relative;
+    top: 50px;
+    display:none;
 }
 #carousel_next {
     width:40px;
-    height:100px;
-    border-radius: 15px 0 0 15px;
+    height:100%;
     background-color:#E1DFE8;
-    float:right;
-    margin-top:150px;
-}
-#rightarrowart {
-    /*found tutorial here: http://css-tricks.com/snippets/css/css-triangle/ */
-    width:0;
-    height:0;
-    border-top:40px solid transparent;
-    border-bottom:40px solid transparent;
-    border-left:40px solid #73688F; /*use opposite end*/
-    float:left;
-    margin-top:10px;
+    right:0;
+    position:absolute;
 }
 #carousel_prev {
     width:40px;
-    height:100px;
-    border-radius: 0 15px 15px 0;
+    height:100%;
     background-color:#E1DFE8;
-    float:left;
-    margin-top:150px;
+    left:0;
+    position:absolute;
 }
-#leftarrowart {
-    width:0;
-    width:0;
-    border-top:40px solid transparent;
-    border-bottom:40px solid transparent;
-    border-right:40px solid #73688F;
-    float:right;
-    margin-top:10px;
+.slide{
+    display:inline-block;
+    width:450px;
+    height:400px;
+    padding: 0 75px 0 75px;
 }
-#slide{
-    margin-left:100px;
-    padding-top:240px;
-}
+/*footer stuff*/
 #footer {
     background-color:#797582;
     margin-top: 100px;
     width:100%;
-    height:75px;
+    height:50px;
     display: none;
     opacity:.3;
-}
-#moveit {
-    margin-left: 150px;
-    margin-top: 60px;
+    padding-top: 25px;
 }
 .red {
     background-color: #F2303A;
     border-radius:10px;
 }
-#termblob {
-    background-color:#797582;
-    border-radius: 40px;
-    width: 900px;
-    height: 600px;
-    display: none;
-    position:fixed;
-    top:10%;
-    left:10%;
-}
-#contract {
-    margin-left:100px;
-    margin-top:100px;
-    color:white;
-}
 #termsopen {
     width: 40px;
     height: 20px;
-}
-#termsclose {
-    background-color:#F2303A;
-    border-radius:20px;
-    position:fixed;
-    top:11%;
-    left:1050px;
-    height:40px;
-    width:60px;
-    color:white;
 }
