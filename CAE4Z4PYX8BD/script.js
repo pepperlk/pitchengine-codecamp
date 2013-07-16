@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#derpy').click(function() {
+    $('li').hover(function() {
         $(this).animate({left: 300}, 'slow');
     });
 });

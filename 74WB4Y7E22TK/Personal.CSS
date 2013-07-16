@@ -26,6 +26,7 @@ a{
 
 #the_10{
     font-size: 3.4em;
+    font-family: monospace;
     position: absolute;
 }
 
@@ -54,7 +55,7 @@ a{
 }
 
 #center2{
-    height: 2000px;
+    height: 2500px;
     width: 1000px;
     margin: 0 auto;
     margin-top: 100px;
@@ -69,7 +70,7 @@ a{
 }
 
 img{
-    height: 200px;
+    height: 230px;
     width: 200px;
     margin: 10px;
 }
@@ -92,4 +93,22 @@ a:hover{
 a{
     color: white;
     font-weight: normal;
+}
+
+#jquery_example{
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background-color: #000080;
+    color: white;
+    text-align: center;
+}
+
+#jquery_example2{
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background-color: #000080;
+    color: white;
+    text-align: center;
 }

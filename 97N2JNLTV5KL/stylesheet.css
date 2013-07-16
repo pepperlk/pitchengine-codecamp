@@ -1,52 +1,88 @@
-/* some styling, I hope */
-/* media queries */
-/* will use the width property of the debugging div to help the jquery work*/
+/*Ye Olde Stylesheet*/
 
-@media (max-aspect-ratio:4/5) {
+/* media queries, gracias casey! */
 
+/* Large desktop */
+@media (min-width: 1200px) {
 #debugging {
-    top:0;
-    left:0;
-    position:absolute;
-    width:20px;
-    height:25px;
+    background-color:blue;
+}
+#navpic {
+    display:none;
+}
+#sidenav {
+    display:none;
+}
+#navbar_background_controls {
+    display:block;
+}
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+#debugging {
+    background-color:yellow;
+}
+#navpic {
+    display:none;
+}
+#sidenav {
+    display:none;
+}
+#navbar_background_controls {
+    display:none;
+}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+#debugging {
     background-color:red;
-    border-radius:15px;
+}
+#navpic {
+    display:none;
+}
+#sidenav {
+    display:none; /* should I display it? */
+}
+#navbar_background_controls {
+    display:none;
+}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+#debugging {
+    background-color:green;
 }
 #navbar {
-    padding-left:5px;
+    display:none;
 }
-#name {
-    margin: 10px 0 10px 10px;
+#navpic {
+    display:block;
 }
+#sidenav {
+    display:block;
 }
-@media (min-aspect-ratio:5/4) {
-    
-
-#debugging {
-    width:25px;
-    height:20px;
-    background-color:green;
-    border-radius:15px;
+#navbar_background_controls {
+    display:none;
 }
 }
-/*16/9?*/
-
 
 /*universal code*/
 *{margin:0;
-    padding:0;}
+    padding:0;}/*Rumaldo code*/
 body {
-    background-image:url('http://69.145.68.236:10200/amber.jpg');
-    background-repeat:no-repeat;
-    background-size:100% 100%; /*still debugging*/
-    background-position: top left;
     margin: 0;
 }
 a {
 	text-decoration: none;
 	color: black;
 }
+.red {
+    background-color: #F2303A;
+    border-radius:3px;
+}
+
 /*popup info*/
 #termblob {
     background-color:#797582;
@@ -62,14 +98,46 @@ a {
 }
 #termsclose {
     background-color:#F2303A;
-    border-radius:20px;
+    border-radius:3px;
     position:fixed;
-    top:11%;
-    left:1050px;
-    height:40px;
-    width:60px;
+    top:5%;
+    right:1%;
     color:white;
 }
+#navpic {
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:2;
+    display:block;
+    background-image:url('http://69.145.68.236:10200/navpic.png');
+}
+/* the sidenav */
+#sidenav {
+    z-index:-1;
+    position:absolute;
+    top:0;
+    left:0;
+    /*is still visible so prevent it in different media queries!*/
+}
+.sidebutton {
+    height: 60px;
+	width: 100px;
+	background-color:#73688F;
+	border-radius: 6px;
+    border: 2px solid blue;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+/* the casey wrapper idea */
+#backgroundwrapper {
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-size:cover;
+}
+
 /*top to bottom*/
 #title {
 	height: 100px;
@@ -79,15 +147,18 @@ a {
     opacity:.7;
     margin:0;
 }
-#name {
-    text-align:center;
-}
 #slogan {
     margin:10px 0 10px 0;
     font-weight:normal;
     font-size:.5em;
     text-align:center;
 }
+#debugging {
+    display:inline-block;
+    border-radius:3px;
+    font-size:.5em;
+}
+
 /*nav stuff*/
 #navbar {
 	width:100%;
@@ -108,18 +179,26 @@ a {
 	padding-top: 5px;
 	padding-left: 5px;
 }
-/*carousel stuff*/
+#navbar_background_controls {
+    right:0;
+}
+#navbar_background_controls > div {
+    display:inline-block;
+}
 
+/*carousel stuff*/
 .container {
     width:1000%;
     height:400px;
     overflow:hidden;   
 }
 #carosel {
-	margin-left:center/*200px*/;
-    margin-top:center/*100px*/;
-	width:600px;
-	height:400px;
+	margin-left:20%;
+    margin-top:2%;
+	min-width:600px;
+    width:60%;
+	min-height:400px;
+    height:80%;
 	background-color:#E8E6ED/*#565559*/;
 	border-radius: 15px;
     overflow:hidden;
@@ -127,25 +206,35 @@ a {
     top: 50px;
     display:none;
 }
-#carousel_next {
-    width:40px;
-    height:100%;
-    background-color:#E1DFE8;
-    right:0;
-    position:absolute;
-}
 #carousel_prev {
-    width:40px;
+    min-width:40px;
+    width:8%;
     height:100%;
     background-color:#E1DFE8;
     left:0;
+    position:absolute;
+}
+#carousel_indicator {
+    position:absolute;
+    top:0;
+    right:8%;
+}
+#carousel_next {
+    min-width:40px;
+    width:8%;
+    height:100%;
+    background-color:#E1DFE8;
+    right:0;
     position:absolute;
 }
 .slide{
     display:inline-block;
     width:450px;
     height:400px;
-    padding: 0 75px 0 75px;
+    height:80%;
+    padding-left:8%;
+    overflow:hidden;
+    border-radius:15px;
 }
 /*footer stuff*/
 #footer {
@@ -156,10 +245,6 @@ a {
     display: none;
     opacity:.3;
     padding-top: 25px;
-}
-.red {
-    background-color: #F2303A;
-    border-radius:10px;
 }
 #termsopen {
     width: 40px;
