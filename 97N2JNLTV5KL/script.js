@@ -1,152 +1,134 @@
 $(document).ready(function() {
-
-    //initial ninja awesome /* :D */ page loading
+    //terms
+    $('#open_terms').click(function(){$('#terms').fadeIn(1000);});
+    $('#terms').click(function(){$('#terms').fadeOut(500);});
     
-    $('background-wrapper').css('background-image', 'url(\'http://69.145.68.236:10200/greener.jpg\')');
-    setTimeout(function(){
-        $('#title').fadeIn(100);
-    }, 500);
-    setTimeout(function() {
-        $('#navbar').fadeIn(1000);
-    }, 1000);
-    setTimeout(function() {
-        $('#carosel').fadeIn(1000);
-    }, 2000);
-    setTimeout(function() {
-        $('#footer').fadeIn(1000);
-    }, 3000);
-
-
-    //terms overlay
-    
-    $('#termsopen').click(function(){
-        $('#termblob').css('width','100%');
-        $('#termblob').css('height','100%');
-        $('#termblob').fadeIn(100);
-    });
-    $('#termsclose').click(function(){
-        $('#termblob').fadeOut(50);
-    });
-    
-    
-    //carousel button functions
-    var slidenum=1;
-    
-    $('#carousel_next').click(function(){
-       slidenum=slidenum +1;
-       if (slidenum >=6){
-           slidenum=1; //hopefully a reset. :D
-       }
-    });
-    $('#carousel_prev').click(function(){
-       slidenum=slidenum -1;
-       if (slidenum <=0){
-           slidenum=5; //also hopefully a reset. :D
-       }
-    });
-    
-    //the slider
-    var currentslide=1;
-    
-    if (slidenum >= currentslide){
-        $('#container').animate({left:'+=450px'});
-        currentslide= ++currentslide;
-    }
-    
-    if (slidenum <= currentslide){
-        $('#container').animate({left:'-=450px'});
-    }
-    //show and tell, old code :D
-
-    // $('#carousel_next').click(function(){
-    //     switch (slidenumb){
-    //         case 5: //it's 5 because 5 is the last slide.
-    //             //do nothing? eventually wrap around? or cheat?
-    //         break;
-    //         default:
-    //             //advance a slide
-    //             $('#container').animate({left:'450px'});
-    //             slidenumb=++slidenumb; //increment marker
-    //             //debugging, for now:
-    //             $('#carousel_indicator').css('background-color','blue');
-    //         break;
-    //     }
-    // });
-    
-    //this is my background js:
-    
-    var backgroundnum = 1;
-    var auto_on = false; //I hope this is boolean.
-    var backgroundspeed = 500; //might want to switch it later
-    
-    function toggle_background_auto(){
-        auto_on = ! auto_on;
-    }
-    $('#toggle_background_auto').click(toggle_background_auto());
-    
-    function background_advance(){
-        backgroundnum = ++backgroundnum; //let's hope incrementing works
-        if (backgroundnum >=6){
-            backgroundnum=1;
+    //tour
+    var auto=false;
+    var slide=1;
+    var avoid = function(slide){  //clear the slides besides the current one.
+        /*var smaller = slide -1; //pick number smaller than slide
+        if (slide != 1){ //as long as I'm not moving slide 1, also this check might not be necisary
+            while(smaller !== 0){ //while it isn't moving something that isn't there
+                var moveleft = '$(\'#' + smaller + '\')'; //build the jquery object
+                moveleft.animate({'margin-left':'-650px'},4000); //move it left
+                --smaller;
+            }
         }
-    }
-    
-    $('#carousel_next').click(function(){
-       background_advance();
-       //kill auto for a while
-    });
-    
-    //advance code, triggered by both the timer (if enabled), and next button:
-    
-    function background_retreat(){
-        backgroundnum = --backgroundnum;
-        if (backgroundnum <=0){
-            backgroundnum = 6;
+        var larger = slide + 1;
+        if (slide != 5){
+            while(larger != 6){
+                var moveright = '$(\'#' + larger + '\')';
+                moveright.animate({'margin-left':'650px'},4000);
+                ++larger;
+            }
+        }*/
+        for (var move=1; move <6; move++){
+            switch(true){
+                case move==slide:
+                    $('#move').animate({'margin-left':'0px'},4000);
+                    break;
+                case move<slide:
+                    $('#move').animate({'margin-left':'-650px'},4000);
+                    break;
+                case move>slide:
+                    $('#move').animate({'margin-left':'650px'},4000);
+                    break;
+            }
         }
-    }
-
-    $('#carousel_prev').click(function(){
-    background_retreat();
-    //kill auto for a while.
-    });
-    
-    
-    //the timer:
-    while (auto_on === true) { //aparently you use three = to compare with true.
-        background_advance();
-        //wait for backgroundspeed ms. standalone delay functions?
-    }
-    
-    //start it 5 seconds in? why not.
-    //$(document).setTimeout(toggle_background_auto(), 5000)
-    //this code is pandora's box. don't let it out again.
-    
-    
-    switch (backgroundnum) {
+    };
+    var query_arrows = function(slide){  //re-implementing a singular reversable hiding/showing previous button
+        /*if (slide == 1){                    // yay! now to get it into a switch statement :D
+            $('#prev').slideUp(2000);
+            $('#next').slideDown(200);
+        }
+        if (slide < 5 && slide > 1){
+            $('#prev').slideDown(2000);
+            $('#next').slideDown(2000);
+        }
+        if (slide == 5){
+            $('#prev').slideDown(2000);
+            $('#next').slideUp(2000);
+        }*/
+        switch(true){
+            case slide == 1:
+                $('#prev').slideUp(2000);
+                $('#next').slideDown(2000);
+                break;
+            /*case slide > 1 && slide < 5: //this was fun to figure out :D
+                $('#prev').slideDown(2000);  //using default now.
+                $('#next').slideDown(2000);
+                break;*/
+            case slide == 5:
+                $('#prev').slideDown(2000);
+                $('#next').slideUp(2000);
+                break;
+            default:
+                $('#prev').slideDown(2000);
+                $('#next').slideDown(2000);
+        }
+    };
+    var request = function(slide){  //pull the requested slide in.
+    switch(slide){ //will eventually tie the .backgrounds into this, negating the .css change :D
         case 1:
-            //background 1
-            $('#backgroundwrapper').css('background-image','url(\'http://69.145.68.236:10200/gray.jpg\')')
+            $('#1').animate({'left':'0'},4000);
+            $('#steel').animate({'left':'0'},4000);
+            $('#2').animate({'left':'100%'},4000);
+            $('#gray').animate({'left':'100%'},4000);
             break;
         case 2:
-            //background 2
-            $('#backgroundwrapper').css('background-image','url(\'http://69.145.68.236:10200/steel.jpg\')')
+            $('#1').animate({'left':'-100%'},4000);
+            $('#steel').animate({'left':'-100%'},4000);
+            $('#2').animate({'left':'0'},4000);
+            $('#gray').animate({'left':'0'},4000);
+            $('#3').animate({'left':'100%'},4000);
+            $('#amber').animate({'left':'100%'},4000);
             break;
         case 3:
-            //background 3
-            $('#backgroundwrapper').css('background-image','url(\'http://69.145.68.236:10200/amber.jpg\')')
+            $('#2').animate({'left':'-100'},4000);
+            $('#gray').animate({'left':'-100'},4000);
+            $('#3').animate({'left':'0'},4000);
+            $('#amber').animate({'left':'0'},4000);
+            $('#4').animate({'left':'100%'},4000);
+            $('#greener').animate({'left':'100%'},4000);
             break;
         case 4:
-            //background 4
-            $('#backgroundwrapper').css('background-image','url(\'http://69.145.68.236:10200/greener.jpg\')')
+            $('#3').animate({'left':'-100%'},4000);
+            $('#amber').animate({'left':'-100%'},4000);
+            $('#4').animate({'left':'0'},4000);
+            $('#greener').animate({'left':'0'},4000);
+            $('#5').animate({'left':'100%'},4000);
+            $('#china').animate({'left':'100%'},4000);
             break;
         case 5:
-            //background 5
-            $('#backgroundwrapper').css('background-image','url(\'http://69.145.68.236:10200/china.jpg\')')
+            $('#4').animate({'left':'-100'},4000);
+            $('#greener').animate({'left':'-100'},4000);
+            $('#5').animate({'margin-left':'0'},4000);
+            $('#china').animate({'margin-left':'0'},4000);
             break;
-    }
-        
-    //using selectable (possibly), help users pick their favorite desktop.
-    
-    //might work later towards a script or css styling that fixes the background size.
-    //use $(window).height();, and a while statement.
+        default:
+            $('#error').slideDown(1000);break;
+    }};
+    $('#next').click(function(){++slide; query_arrows(slide); request(slide)});
+    $('#prev').click(function(){--slide; query_arrows(slide); request(slide)});
+    //initial ninja awesome :D page loading
+    setTimeout(function(){request(slide);}, 500); //I love this function.
+    //avoid(slide);
+    setTimeout(function(){$('#title').slideDown(2000);}, 500);
+    setTimeout(function(){$('#navbar').slideDown(2000);}, 1000);
+    setTimeout(function(){$('#start_tour').slideDown(2000);}, 2000);
+    setTimeout(function(){$('#footer').slideDown(1000);}, 3000);
+    setTimeout(function(){$('#start_tour').addClass('red');}, 2500);
+    $('#start_tour').click(function(){
+        //set the stage
+        $('#stage').fadeIn(1000);
+        $('#start_tour').fadeOut(500);
+        $('#navbar').slideUp(2000);
+        $('#title').slideUp(2000);
+        $('#footer').slideUp(2000);
+        request(slide);
+        query_arrows(slide);
+        //start the timer
+        /*auto=true;*/ //can't do that D:
+        });
 });

@@ -7,20 +7,9 @@
     <link id="style" type="text/css" rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>
-<div id="termblob">
-    <div id="contract">
-        <h1>Terms</h1>
-        <p>This code was written by me,</p>
-        <h2>However;</h2>
-        <p>These photographs are <u><strong>NOT</strong></u> mine.</p>
-        <h2>if you need to know whose they are,</h2>
-        <h1>click <strong><a href="http://lmgtfy.com/?&q=search+by+image" color="white">THIS</a></strong> link</h1>
-        <div id="termsclose">
-            <h2 color="white"><strong>close</strong></h2>    
-        </div>
-    </div>
+<div id="terms" class="fadeingIn">
+    <p><strong>Terms:</strong>This code was written by me,<em><strong>However;</strong></em> These photographs are <u><strong>NOT</strong></u> mine. If you need to know whose they are, click <strong><a href="http://lmgtfy.com/?q=search+by+image" target="_blank" color="white">THIS</a></strong> link. click anywhere to <strong>close</strong>.</p>
 </div>
-<div id="navpic"><!--clickable button--></div>
 <div id="sidenav">
     <ul>
         <li><a href="http://69.145.68.236:10200" target="_blank"><div class="sidebutton">Home server</div></a></li>
@@ -32,11 +21,11 @@
         <li><a href="mailto:whitingcameronlinux@gmail.com"><div class="sidebutton">Contact me</div></a></li>
     </ul>
 </div>
-<div id="backgroundwrapper">
-<div id="title">
-	<h1>WhitingCameronLinux|<span id="slogan">see Linux differently</span><span id="debugging">debugging</span></h1>
+<div id="background"> <!--this will be moved to the side using media queries..-->
+<div id="title" class="fadeingIn">
+	<h1>WhitingCameronLinux|<span id="slogan">see Linux differently</span> <span id="landscape">landscape?</span> <span id="portrait">portrait?</span></h1>
 </div>
-<div id="navbar">
+<div id="navbar" class="fadeingIn">
     <ul>
     	<li class="playnice"><a href="http://69.145.68.236:10200" target="_blank"><div class="navbutton">Home server</div></a></li>
 	  	<li class="playnice"><a href="http://cameronlinux.wordpress.com/informal" target="_blank"><div class="navbutton">Wordpress</div></a></li>
@@ -46,20 +35,16 @@
         <li class="playnice"><a href="http://jsfiddle.net/user/whitingcameronlinux/fiddles/" target="_black"><div class="navbutton">JSfiddle</div></a></li>
         <li class="playnice"><a href="mailto:whitingcameronlinux@gmail.com"><div class="navbutton">Contact me</div></a></li>
     </ul>
-    <div id="navbar_background_controls">
-        <div id="background_previous"><img src="http://69.145.68.236:10200/previous.png"></div>
-        <div id="toggle_background_auto"></div>
-        <div id="background_next"><img src="http://69.145.68.236:10200/next.png"></div>
-    </div>
 </div>
-<div id="carosel">
-    <div id="carousel_prev"></div>
-    <div id="carousel_indicator">clicked?</div>
-    <div id="carousel_next"></div>
+<div id="start_tour" class="fadeingIn" class="red">
+    <h1 color="white">click me to start the tour :D</h1>
+</div>
+<div id="error" class="red">Error!</div>
+<div id="stage" class="fadeingIn">
     <div class="container">
         <div class="slide" id="1">
-            <h2>Greatings!</h2>
-            <h3>Hello! My name is Cameron, and I see Linux differently</h3>
+            <h2 color="white">Greatings!</h2>
+            <h3 color="white">Hello! My name is Cameron, and I see Linux differently</h3>
         </div>
         <div class="slide" id="2">
             <h2>But first, what is Linux?</h2>
@@ -89,9 +74,17 @@
         </div>
 	</div>
 </div>
-<div id="footer">
-    <h4>a <span class="red"><a href="http://support.pitchengine.com/?page_id=1911" target="_blank">PitchEngine</a>&copy;</span><span class="red"><a href="http://pe-accel.azurewebsites.net/?page_id=251" target="_blank">codeacademy</a></span> project|homemade by me|<button id="termsopen" class="red">terms</button></h4></li>
+<div id="footer" class="fadeingIn" class="gray">
+    <h4>a <span class="red"><a href="http://support.pitchengine.com/?page_id=1911" target="_blank">PitchEngine</a>&copy;</span><span class="red"><a href="http://pe-accel.azurewebsites.net/?page_id=251" target="_blank">codeacademy</a></span> project|homemade by me|<button id="open_terms" class="red">terms</button></h4></li>
 </div>
+<!--add id's 1-5 onto these: -->
+    <div class='backgrounds' id='steel'></div>
+    <div class='backgrounds' id='gray'></div>
+    <div class='backgrounds' id='amber'></div>
+    <div class='backgrounds' id='greener'></div>
+    <div class='backgrounds' id='china'></div>
 </div> <!--end casey wrapper idea -->
+<div id="prev" class="gray"></div>
+<div id="next" class="gray"></div>
 </body>
 </html>

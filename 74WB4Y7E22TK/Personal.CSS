@@ -41,6 +41,13 @@ a{
     float: left;
     text-align: center;
 }
+#center:hover {
+    color: #E0FFFF;
+}
+
+.hidden{
+    display: none;
+}
 
 #thenter{
     height: 100px;
@@ -53,12 +60,15 @@ a{
     float: right;
     text-align: center;
 }
+#Home_links{
+    border: 1px solid black;
+}
 
 #center2{
     height: 2500px;
     width: 1000px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 400px;
     padding: 20px;
     clear: both;
     background-color: #EBF4FA;

@@ -1,0 +1,128 @@
+body{
+    background: #d8cc91 url(http://69.145.68.236:10200/campOfCode.svg) no-repeat top center;
+    background-size:50%;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}#wrapper{
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    position:absolute;
+}*{
+    margin:0;
+    padding:0;
+    font-size:1.2em;
+}li{
+    font-size:.9em;
+    text-decoration:none;
+}a{
+    text-decoration:none;
+    color: black;
+    font-weight:bold;
+}#credits{
+    position:fixed;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    padding-top:10%;
+    padding-left:20%;
+    padding-right:20%;
+    color:white;
+    opacity:.8;
+    background-color:#797582;
+}#title{
+    display:none;
+    z-index:5;
+    height:60px;
+    width:1200;
+    padding-left:10%;
+    padding-top:40px;
+    background-color:#25CC51;
+    font-size:1.1em;
+}#footer{
+    display:none;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    padding-left:100px;
+    padding-top:25px;
+    background-color:#797582;
+    font-size:.5em;
+}i{
+    position:absolute;
+    font-size:10em;
+    top:40%;
+    opacity:.6;
+    margin-right:2px;
+}#prev{
+    z-index:4;
+    display:none;
+    position:fixed;
+    left:0;
+    bottom:0;
+    height:100%;
+    width:15%;
+}#prev:hover i {
+    opacity:1;
+}#next{
+    z-index:4;
+    display:none;
+    position:absolute;
+    right:0;
+    bottom:0;
+    height:100%;
+    width:15%;
+}#next:hover i{
+    opacity:1;
+}.block{
+    background-color:blue;
+    border-radius:15px;
+    width:30%;
+    height:30%;
+}.slide{
+    position:absolute;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:5%;
+    left:100%;
+    display:inline-block;
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+    background-color:#d8cc91;
+}#I1{background-color:#d8cc91;
+}#I2{background-image:url('http://69.145.68.236:10200/gray.jpg');
+    padding-left:15%;
+}#I3{background-image:url('http://69.145.68.236:10200/amber.jpg');
+    padding-top:1%;
+}#I4{background-image:url('http://69.145.68.236:10200/greener.jpg');
+    padding-left:20%;
+    padding-top:1%;
+}#I5{background-image:url('http://69.145.68.236:10200/china.jpg');
+}#git{
+    position:absolute;
+    left:1%;
+    top:10%;
+}.logo{
+    position:absolute;
+    right:40%;
+    top:25%;
+}#mint{
+    position:absolute;
+    left:0;
+    top:0;
+    display:inline-block;
+    width:40%;
+    height:100%;
+    background-color:green;
+}#fedora{
+    position:absolute;
+    left:40%;
+    top:0;
+    display:inline-block;
+    width:45%;
+    height:100%;
+    background-color:blue;
+}
