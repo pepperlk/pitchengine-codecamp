@@ -13,4 +13,14 @@ $(document).ready(function() {
     $('#center').click(function() {
         $("#menu").toggleClass('hidden');
     });
+    
+    $('#thenter').click(function() {
+        $("#menu2").toggleClass('hidden2');
+    });
 });
+
+
+function startTrivia()
+{
+    alert("What's your favorite color?");
+}

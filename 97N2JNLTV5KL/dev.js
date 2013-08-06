@@ -17,7 +17,7 @@ var request = function(slide){
         $('#prev').slideDown(2000);
         $('#next').slideDown(2000);
     }
-    switch(slide){ //trying to fix this bellow
+/*    switch(slide){ //trying to fix this bellow
         case 1:
             $('#I1').animate({'left':'0'},speed);
             $('#I2').animate({'left':'100%'},speed);
@@ -53,18 +53,18 @@ var request = function(slide){
             break;
         default:
             break;
-    }
+    }*/
     //var stage=$('.slide');
 for (var move=0; move < 5; move++){ // I've got to make this work somehow.
 switch(true){
     case move==slide: //pull slide(s) into view
-        $('.slide')[move].animate({'left':'0'},speed);
+        $($('.slide')[move]).animate({'left':'0'},speed);
         break;
     case move<slide: //move slide(s) to left
-        $('.slide')[move].animate({'left':'-100%'},speed);
+        $($('.slide')[move]).animate({'left':'-100%'},speed);
         break;
     case move>slide: //move slide(s) to right
-        $('.slide')[move].animate({'left':'100%'},speed);
+        $($('.slide')[move]).animate({'left':'100%'},speed);
         break;
     }
 }
