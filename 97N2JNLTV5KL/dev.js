@@ -1,86 +1,47 @@
 $(document).ready(function() {
-var auto=false;
 var slide=0;
-var speed=7000;
-//tour
+var auto=true;
 var request = function(slide){
-    switch(true){ //take care of the arrows:
-    case slide <= 1:
-        $('#prev').slideUp(2000);
-        $('#next').slideDown(2000);
-        break;
-    case slide >= 7:
-        $('#prev').slideUp(2000);
-        $('#next').slideUp(2000);
-        break;
-    default:
-        $('#prev').slideDown(2000);
-        $('#next').slideDown(2000);
+    switch(true){
+        case slide < 0:
+            slide = $('.slide').length -1;
+            break;
+        case slide > $('.slide').length -1:
+            slide = 1;
+            break;
     }
-/*    switch(slide){ //trying to fix this bellow
-        case 1:
-            $('#I1').animate({'left':'0'},speed);
-            $('#I2').animate({'left':'100%'},speed);
+    for (var move=0; move < $('.slide').length; move++){
+        var hide=move-1;
+    switch(true){
+        case move==slide:
+            $($('#shelf img')[hide]).addClass('hide');
+            $($('.slide')[move]).addClass('active');
+            $($('.slide')[move]).removeClass('right left');
             break;
-        case 2:
-            $('#I1').animate({'left':'-100%'},speed);
-            $('#I2').animate({'left':'0'},speed);
-            $('#I3').animate({'left':'100%'},speed);
+        case move<slide:
+            $($('#shelf img')[hide]).removeClass('hide');
+            $($('.slide')[move]).addClass('left');
+            $($('.slide')[move]).removeClass('active right');
             break;
-        case 3:
-            $('#I2').animate({'left':'-100%'},speed);
-            $('#I3').animate({'left':'0'},speed);
-            $('#I4').animate({'left':'100%'},speed);
+        case move>slide:
+            $($('#shelf img')[hide]).removeClass('hide');
+            $($('.slide')[move]).addClass('right');
+            $($('.slide')[move]).removeClass('active left');
             break;
-        case 4:
-            $('#I3').animate({'left':'-100%'},speed);
-            $('#I4').animate({'left':'0'},speed);
-            $('#I5').animate({'left':'100%'},speed);
-            break;
-        case 5:
-            $('#I4').animate({'left':'-100%'},speed);
-            $('#I5').animate({'left':'0'},speed);
-            $('#I6').animate({'left':'100%'},speed);
-            break;
-        case 6:
-            $('#I5').animate({'left':'-100%'},speed);
-            $('#I6').animate({'left':'0'},speed);
-            $('#I7').animate({'left':'100%'},speed);
-            break;
-        case 7:
-            $('#I6').animate({'left':'-100%'},speed);
-            $('#I7').animate({'left':'0'},speed);
-            break;
-        default:
-            break;
-    }*/
-    //var stage=$('.slide');
-for (var move=0; move < 5; move++){ // I've got to make this work somehow.
-switch(true){
-    case move==slide: //pull slide(s) into view
-        $($('.slide')[move]).animate({'left':'0'},speed);
-        break;
-    case move<slide: //move slide(s) to left
-        $($('.slide')[move]).animate({'left':'-100%'},speed);
-        break;
-    case move>slide: //move slide(s) to right
-        $($('.slide')[move]).animate({'left':'100%'},speed);
-        break;
-    }
-}
+    }}
+    $('#frosted').fadeToggle(400);
+    $('#frosted').fadeToggle(1600);
 };
-//initial ninja awesome :D page loading
-setTimeout(function(){$('#title').slideDown(1000);}, 500);
-setTimeout(function(){$('#footer').slideDown(1000);}, 1000);
-$('#credits').fadeIn(1000);
-//buttons
 setTimeout(function(){
-    $('#credits').fadeOut(500);
-    $('#title').slideUp(2000);
-    $('#footer').slideUp(2000);
+    $('#frosted').fadeTo(2000,1);
+    $('#shelf').fadeTo(2000,1);
+    $('.slide').fadeTo(2000,1);
+},6000);
+setInterval(function(){
+    if (auto===true){
     request(slide);
-    auto=true;
-},4000);
-$('#next').click(function(){++slide; request(slide); auto=!auto});
-$('#prev').click(function(){--slide; request(slide); auto=false});
+    ++slide;
+    if (slide == $('.slide').length){slide=0}
+}},8000);
+$('#shelf img').click(function(){auto=false;slide=parseInt($(this).attr('data-id'));request(slide)});
 });

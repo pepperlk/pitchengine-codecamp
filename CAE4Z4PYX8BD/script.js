@@ -1,5 +1,16 @@
 $(document).ready(function() {
-    $('li').hover(function() {
-        $(this).animate({left: 300}, 'slow');
+    $('img').mouseenter(function() {
+        
+        var left = parseInt($(this).css('margin-left'));
+        
+        if ($(this).hasClass('showText')){
+            left -= 300;
+        }
+        else {
+            left += 300;
+        }
+        
+        $(this).css('margin-left', left + 'px');
+        $(this).toggleClass('showText');
     });
 });
