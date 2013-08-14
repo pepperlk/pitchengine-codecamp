@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>For Gabe</title>
-<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+    <title>For Gabe</title>
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
     <body>
         <div class="wrapper">
             <div class="right-left">
-                <div class="left"><a href="#">< retro videogames</a></div>
-                <div class="right"><a href="#">codeing ></a></div>
+                <div class="left"><a href="#" class="left-click">&lt; retro videogames</a></div>
+                <div class="right"><a href="#" class="right-click">codeing &gt;</a></div>
             </div>
             <div class="top-bottom">
-                <div class="top"><a href="#">this is right></a></div>
-                <div class="bottom"><a href="#">< This is bottom</a></div>
-                <div class= "gallery">
-                   
-            </div>
+                <div class="top"><a href="#" class="top-click">Skiing &gt</a></div>
+                <div class="bottom"><a href="#" class="bottom-click">&lt music</a></div>
+                <div class= "gallery"> </div>
+        </div>
             <div class="slide-wrapper">
-                <div class='outside-right'></div>
-                <div class='outside-left'></div>
-                <div class='outside-bottom'></div>
-                <div class='ouside-top'></div>
+                <div class='outside-right'>
+                    
+                </div>
+                <div class='outside-left'>
+                    
+                </div>
+                <div class='outside-bottom'>
+                    
+                </div>
+                <div class='outside-top'>
+                    
+                </div>
             </div>
         </div>
+        
+        <script>
+            $(document).ready(function() {
+                $('.left-click').click(function(e) {
+                    e.preventDefault();
+                    $('.outside-left').toggleClass('onstage');
+                });
+           
+                $('.right-click').click(function(e) {
+                   e.preventDefault();
+                   $('.outside-right').toggleClass('onstage');
+                });
+            
+                $('.top-click').click(function(e) {
+                    e.preventDefault();
+                    $('.outside-top').toggleClass('onstage');
+                });
+                
+                $('.bottom-click').click(function(e){
+                    e.preventDefault();
+                    $('.outside-bottom').toggleClass('onstage');
+                });
+                });
+            
+        </script>
     </body>
 </html>

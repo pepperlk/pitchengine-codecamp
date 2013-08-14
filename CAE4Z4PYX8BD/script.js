@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('img').mouseenter(function() {
+    $('.move').hover(function() {
         
         var left = parseInt($(this).css('margin-left'));
         

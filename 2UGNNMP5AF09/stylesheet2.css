@@ -19,7 +19,7 @@ body {
 }
 .b {
     margin-left: 250px;
-    width:275px;
+    width:750px;
 }
 a {
     text-decoration:none;
@@ -29,9 +29,17 @@ a {
     margin-left: 5px;
     width:160px;
     background-color:white;
+    color:black;
     border-color:white;
+    display:inline-block;
 }
 .c img{width:100%;}
+li {
+    list-style-type: none;
+    display:inline-block;
+    width:200;
+    vertical-align: top;
+}
 .a {
     color:white;
     width:175px;

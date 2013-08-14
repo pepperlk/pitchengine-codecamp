@@ -76,7 +76,7 @@ switch(user) {
         alert("That's not an option! pick one of the 5 above.");
         break;
     }
-}
+}       
 
 function alertOfSent()
 {

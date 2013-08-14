@@ -29,19 +29,19 @@ var request = function(slide){
             $($('.slide')[move]).removeClass('active left');
             break;
     }}
-    $('#frosted').fadeToggle(400);
-    $('#frosted').fadeToggle(1600);
+    $('#frosted').fadeTo(400,0);
+    $('#frosted').fadeTo(1600,.7);
 };
 setTimeout(function(){
-    $('#frosted').fadeTo(2000,1);
+    $('#frosted').fadeTo(2000,.7);
     $('#shelf').fadeTo(2000,1);
     $('.slide').fadeTo(2000,1);
-},6000);
+},2000);
 setInterval(function(){
     if (auto===true){
     request(slide);
     ++slide;
     if (slide == $('.slide').length){slide=0}
-}},8000);
+}},4000);
 $('#shelf img').click(function(){auto=false;slide=parseInt($(this).attr('data-id'));request(slide)});
 });
