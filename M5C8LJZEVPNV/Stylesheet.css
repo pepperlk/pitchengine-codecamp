@@ -26,6 +26,8 @@
 .left {
     float: left;
     padding-left:10px;
+    font-family: 'Corben';
+    <font size="15">This is some text!</font>;
 }
 
 .right {

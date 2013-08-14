@@ -7,7 +7,8 @@ $(document).ready(function(){
     $(".startover").click(function(){
         $(this).toggle("explode");
         setTimeout(function() {
-            $(".blowup").css("display", "inline-block");
+            $(".blowup").css("display", "block");
+            $(".startover").css("display", "block");
         }, 1000);
     });
 
